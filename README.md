@@ -1,8 +1,8 @@
 # Introduction
 
-We created this open source repo so that you can contribute to the user experience of DailyBot and help us increase the quality of the translations, if you want to introduce a new language, please feel free to propose it.
+We created this open source repository so that you can contribute to the user experience of DailyBot, we appreciate your help on increasing the quality of the translations, if you want to introduce a new language, please feel free to propose it by opening an issue.
 
-This repository includes the core conversations (translation tokens) for DailyBot's chatbot. Please notice that our web application is only supporting English and Spanish at the moment, however the chatbot can support more languages, a new language should have always a separate file.
+This repository includes core conversations (translation tokens) for DailyBot's chatbot. Please notice that our web application is only supporting English and Spanish at the moment, however the chatbot can support more languages, a new language should have always a separate file.
 
 Question templates (for follow-ups) are not included in this repository. If you have any recommendation regarding the translation of a question template in follow-ups, please open an issue and we'll review it with our product team.
 
