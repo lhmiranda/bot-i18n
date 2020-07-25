@@ -14,7 +14,8 @@ Notice that some translations tokens might be excluded for security reasons.
 2. DailyBot talks to you, as a teammate
 3. Avoid any offensive vocabulary
 4. Whenever is possible, the communication should be genre neutral
-5. Our team will review translations and pull requests before accepting them
+5. Preserve variable names and review the syntax; before you create a pull request, review that the JSON is valid
+6. Our team will review translations and pull requests before accepting them
 
 
 ## Huge thanks
