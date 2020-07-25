@@ -1,0 +1,584 @@
+{
+  "daily": {
+    "finish": "Well done! This is all, you can continue with your work 💪",
+    "wantDaily": "Hey! Are you ready to have our daily meeting now?",
+    "later": "Ok, you can start your daily later by typing *`daily`*.",
+    "fail": "I'm having an issue when saving your daily follow-up in memory, can you please try again later by typing `daily`?",
+    "failTemplate": "I'm having an issue when saving your daily follow-up in memory, it seems that you have changed the template of the followup, can you please try again by typing `daily`?",
+    "dailyExists": "Your daily report is already completed, please type *report* to see your last update or type *`daily reset`* to delete your Today's daily.",
+    "resetDailyNoAction": "You haven't finished your Today's daily yet.\nType *`daily`* in a direct message to me to start your daily follow-up, or wait until your next daily, I will remind you.",
+    "resetDailySuccess": "Ok, I deleted your daily report.\nYou can start again your Daily report by typing *`daily`* 🙂",
+    "resetDailyFail": "I'm having trouble deleting your report, it might be temporary. Sorry and please try asking me later for this.",
+    "resetDailyChannelInfo": "I can help you! However it should be via direct message.\nPlease type *`daily reset`* in a DM to me.",
+    "motDay": "At the end of this daily follow-up, I'll ask you an additional question about motivation 😉",
+    "noDaily": "Hey! I just shared the daily report with the team, but you didn't complete yours 😞 - please let your team know what you're working on.\nYou can still fill it in, just type *`daily`* and let's do it 🙂",
+    "halfDaily": "Heads up! I just shared the team report but you didn't finish yours, you can still fill it in 😉",
+    "channelInfo": "I can surely help with this via direct message.\nType me *`daily`* as DM to start your daily update.",
+    "daily_limit_reached": {
+      "pull": {
+        "admin": "Hey! I’m sorry I can't help you with this for now.\n\nYour team has reached the monthly limit of 100 follow-up reports.\n\nPlease [upgrade your plan]({{{url}}}) to remove these limits or wait until the next month for me to continue working with your team again, meanwhile, all your team can see previous reports at the dashboard.",
+        "member": "Hey! I’m sorry I can't help you with this for now.\n\nYour team has reached the Free reports limit, please ask your admin to [upgrade](https://www.dailybot.co/pricing/) or wait until the next month for the free limit to be reset."
+      },
+      "push": {
+        "admin": "Hi! Excuse me for bothering you.\n\nYour team just reached the monthly limit of 100 follow-up reports.\nIf you want me to keep doing follow-ups with your team, please [upgrade your plan]({{{url}}}) or wait until the next month for the free limit to be reset.",
+        "member": "Hi! Excuse me for bothering you.\n\nYour team just reached the Free reports limit so I won't be doing follow-ups with you until the next month. In order to solve it, please ask your admin to [upgrade the plan](https://www.dailybot.co/pricing/)."
+      }
+    },
+    "snoozed": "Ok, your daily has been snoozed for {{timeValue}} minutes.",
+    "resetFollowups": {
+      "choices": {
+        "starterOneOption": "Do you want to delete your today's response related to *{{{followupName}}}*?",
+        "starterOneOptionJoinResponses": "Do you want to delete your responses of your today's Follow-Ups? _Those are: *{{{followupsNames}}}*_",
+        "starterMultipleOptions": "These are your today's responses to Follow-Ups: _(please type the number of the Follow-Up to reset or type *cancel* to stop this process)_.",
+        "notNumber": "Please type a number between 1 and {{totalRespondedFollowups}} or type *cancel* to stop the process. _Check the number at the beginning of each responded Follow-Up_."
+      },
+      "notCompleted": "You haven't responded to any Follow-Ups today.\nPlease type *`daily`* to start your daily Follow-Ups.",
+      "followupRemoved": "Ok, I deleted your response to the Follow-Up *{{{followupName}}}*.\nPlease type *`daily`* to start over with your daily update.",
+      "followupRemovedJoinResponses": "Ok, I deleted your latest responses for these Follow-Ups: *{{{followupsNames}}}*.\nPlease type *`daily`* to start over with your daily update.",
+      "noActionPerformed": "Ok, I didn't delete any response."
+    },
+    "followups": {
+      "choices": {
+        "starterMultipleOptions": "These are your Follow-Ups for today, _please type the Follow-Up number to start with or type *cancel* to stop this process_:",
+        "nextFollowup": "Let's continue with the pending Follow-Ups, _please type the Follow-Up number to continue or type *cancel* to stop_:",
+        "nextFinalFollowup": "Would you like to complete our final Follow-Up? This is *{{{followupName}}}*.",
+        "nextFinalFollowupJoinResponses": "Would you like to complete your response for our final Follow-Ups? These are: *{{{followupsNames}}}*.",
+        "notPending": "There's no more pending Follow-Ups.",
+        "notNumber": "Please type a number between 1 and {{totalPendingFollowups}} or type *cancel* to stop this process. _Check the number at the beginning of each Follow-Up_.",
+        "wantDailyOneChoice": "Hey! Are you ready to have our *{{{followupName}}}* daily meeting now?"
+      },
+      "startFollowup": "Nice, this is your update for *{{{followupName}}}*.",
+      "startFollowupAnonymous": "> *_Important: your response to this report will be anonymous._*",
+      "startFollowupJoinResponses": "Nice, this update is for these Follow-Ups: *{{{followupsNames}}}*.",
+      "followupFinished": "Well done! Your update for *{{{followupName}}}* was completed.",
+      "followupFinishedJoinResponses": "Well done! Your update was completed for these Follow-Ups: *{{{followupsNames}}}*.",
+      "allFollowupsFinished": "Well done! This is all, you can continue with your work 💪",
+      "cancel": "Ok, you cancelled your daily update. Once you're ready, please type *`daily`* to start with your daily update."
+    }
+  },
+  "report": {
+    "oneByOne": "I just got a new daily report by *{{{name}}}*. Check it out:",
+    "autoReportBody": "Hey! The daily report for team *{{{teamName}}}* is ready - you can see it on DailyBot's [dashboard]({{{url}}}).\nIssues reported: {{overallTotalIssues}}",
+    "autoReportBodyClipped": "Hey! The daily report for team *{{{teamName}}}* is ready - there is a total of {{{overallTotalDailies}}} dailies and {{{overallTotalIssues}}} issues. We are only showing the first {{{totalReportsShown}}} and can [see them all on DailyBot's dashboard]({{{url}}}).",
+    "noExists": "Sorry, at this moment I don't have any daily reports associated with the teams of this channel.",
+    "noExistsMembers": "Sorry, a1t this moment I don't have any daily reports associated with the teams of this channel and the mentioned users.",
+    "reportBody": "Alright! The daily report is here.\nIssues reported: {{issues}}",
+    "reportBodyUserSelected": "Alright! This is the info.\nIssues reported: {{issues}}",
+    "reportBodyUserSelectedHangouts": "Alright! You can see the full report on [dashboard at DailyBot]({{{url}}}). This is the summary:\nDailies total: {{dailies}}\nIssues reported: {{issues}}",
+    "reportLink": "Here comes the report, <{{{path}}}click to see it on DailyBot's dashboard.>",
+    "notCompleted": "\nThere are users pending to complete this daily: {{{usersMention}}}"
+  },
+  "reportV2": {
+    "noDaily": {
+      "1": "Hey! I just shared the daily report, but you didn't complete your follow-up.\nThese are your Follow-Ups for today: {{{followupsNames}}} 😞 - please let your team know what you're working on.\nYou can still fill it in, just type *`daily`* and let's do it 🙂",
+      "n": "Hey! I just shared the daily report, but you didn't complete your follow-up.\nThis is your Follow-Up for today: {{{followupsNames}}} 😞 - please let your team know what you're working on.\nYou can still fill it in, just type *`daily`* and let's do it 🙂"
+    },
+    "halfDaily": "Heads up! I just shared the follow-up report but you didn't finish yours, you can still fill it in 😉",
+    "noFollowups": "At the moment, I don't have any Follow-Ups related to this channel.",
+    "noFollowupsDirect": "At the moment, you don't have any active Follow-Ups for today.",
+    "chooseFollowup": "Please tell me which Follow-Up report you'd like to get (*type the number*) or type _cancel_ to stop this process:",
+    "chooseFollowupMentionedUsers": "The mentioned users are participating in several follow-ups today. Please tell me which Follow-Up report you want to get (*type the number*) or type _cancel_ to stop this process:",
+    "notNumber": "Please type a number between 1 and {{totalActiveFollowups}} or type *cancel* to stop this process. _Check the number at the beginning of each Follow-Up_.",
+    "reportMessageOnDemand": "The Follow-Up *{{{followupName}}}* has ({{numReports}}) responses for today.\nTotal blockers reported: {{numIssues}}",
+    "reportMessageOnDemandMentionedUsers": "The Follow-Up *{{{followupName}}}* has ({{numReports}}) responses for today by the mentioned users.\nTotal blockers reported: {{numIssues}}",
+    "reportCancel": "Ok, we can do this later.",
+    "autoReportBody": "Hey! The Follow-Up report for *{{{followupName}}}* is ready! You can see it on [my Dashboard]({{{url}}}).\nTotal blockers reported: {{overallTotalIssues}}",
+    "noReport": "The Follow-Up for *{{{followupName}}}* hasn't got any responses today."
+  },
+  "mot": {
+    "notNum": "You should type a number from 1 to 5 _(1 is low motivation and 5 is high motivation)_.",
+    "thanks": "Thanks! your answer will be kept anonymous.",
+    "interactive": {
+      "title": "Quick answer",
+      "options": {
+        "1": ":disappointed: · 1",
+        "2": ":face_with_raised_eyebrow: · 2",
+        "3": ":neutral_face: · 3",
+        "4": ":smiley: · 4",
+        "5": ":star-struck: · 5"
+      },
+      "values": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5"
+      }
+    }
+  },
+  "followups": {
+    "notActive": "The *Follow-ups* skill must be activated first.\nPlease go back to [DailyBot dashboard]({{{followups_dashboard_url}}}) to enable it.",
+    "skillConfigured": "The *Follow-ups* skill has been enabled for *{{{teamName}}}* team 🎉🎉🎉",
+    "skillEmptyReportUrl": "\nGet reports for this Follow-Up and for different dates [on the Dashboard]({{{url}}}).",
+    "skillPreferencesUrl": "\nYou can review your Follow-Ups preferences [here]({{{url}}}).",
+    "skillReportUrl": "\nGet full report at [Dashboard]({{{url}}})."
+  },
+  "slack": {
+    "shareChannelExternalBotInteraction": "Sorry, I can only reply to user messages from the shared external organization. But you can also install me in your workspace [following this link]({{{url}}}) 😊"
+  },
+
+  "_COMMENT_BOT_INTERACTION_HANDLERS": "----- BOT INTERACTION HANDLERS -----",
+
+  "bot_interaction": {
+
+    "_COMMENT_CORE": "----- CORE -----",
+
+    "core": {
+      "Onboarding": {
+        "directMessage": {
+          "intro": {
+            "text": "Hey! Nice to meet you.\n\nI’m DailyBot and I can help you automate daily updates, stand-up meetings, check-ins, retrospectives and track your team motivation. [Learn more]({{{urlLanding}}}) or visit our [support center]({{{urlSupport}}}) if you need help.\n\nLet’s set up your account, it’s easy.",
+            "extraAdminIntro": {
+              "hangouts": "Before continuing, I recommend adding me (@DailyBot) to one of your rooms, here in Hangouts Chat. If you already did it, you can skip this step.",
+              "msteams": "Please add me (@DailyBot) to one of your teams, here in Microsoft Teams. If you already did it, you can skip this step."
+            }
+          },
+          "pairingFinished": {
+            "intro": "Hey! Well done! I can help you automate daily updates, stand-up meetings, check-ins, retrospectives and track your team motivation.",
+            "buttonText": "Go to dashboard"
+          },
+          "guestUserShouldAddedFirst": {
+            "slack": "Hi! You're not member of DailyBot yet, please ask an administrator to add you to a team, after that, we'll be able to start working together 😄"
+          }
+        },
+        "channelMessage": {
+          "firstTimeAdded": {
+            "directMessageFromChannelTrigger": "Hey! Thanks for adding me to your team, I’m really honored. Please use the following link to set me up:",
+            "channel": {
+              "intro": "*Hi! Nice to meet you all*, I’m thrilled to be here — I’m DailyBot and I can help you automate daily updates, stand-up meetings, check-ins, retrospectives, and track team motivation. [Learn more]({{{urlLanding}}}) or visit our [support center]({{{urlSupport}}}) if you need help.",
+              "setup": {
+                "hangouts": "*{{{userName}}}* just became an administrator and we need to complete the account setup.\n\n[user], please send me a *private message* to set up your account.",
+                "msteams": "We need to complete the account setup, *{{{userName}}}* just became an administrator and I’m sending you a private message with simple instructions to complete the configuration."
+              }
+            }
+          },
+          "organizationAlreadyExist": "Hey! Nice to meet you.\nI’m DailyBot and I can help you automate daily updates, stand-up meetings, check-ins, retrospectives and track your team motivation. [Learn more]({{{urlLanding}}}) or visit our [support center]({{{urlSupport}}}) if you need help.\nPlease send me a *private message* to set up your account, it’s easy."
+        },
+        "registrationButtonText": "Complete your registration"
+      },
+      "FeedbackBuilder": {
+        "info": "Hey *[user]*, it'd be great to receive feedback from you. If it's something important, I recommend you to visit our support center.",
+        "feedbackButtonText": "Send Feedback",
+        "supportButtonText": "Visit Support"
+      },
+      "FeedbackStarter": {
+        "info": "Nice, I love feedback. Please write a comment and I'll make sure that my team reviews it. I'll wait up to 10 minutes for that message, or type *`cancel`* to stop this process."
+      },
+      "FeedbackSender": {
+        "thanks": "Got it! Thanks for sharing your feedback.",
+        "noMessage": "You can send feedback about myself to the team behind me. Just type *`feedback`* _followed by your message_. Example: `feedback this bot is awesome and handsome 😍`",
+        "fail": "Sorry, it seems I forgot what we were talking about. Please type *`feedback` _your_message_* to send your feedback.",
+        "empty": "The feedback message should not be empty, write your feedback and try to send it again.",
+        "cancel": "I'll be waiting for your feedback till a next opportunity."
+      },
+      "Help": {
+        "text": "Hey, your wish is my command, and these are my available commands:",
+        "tips": {
+          "1": "In a direct message just send me the command, in channels you should tag me with *`@dailybot`* before the command.",
+          "2": "Need extra help? Check out [our FAQs page]({{{url}}}) for more info."
+        },
+        "commands": {
+          "daily": "Type *`daily`* in a direct message to start your daily update.",
+          "dailyStatus": "Type *`daily status`* in a direct message to get the status about your daily updates.",
+          "dailyReset": "Type *`daily reset`* to remove your today's report.",
+          "report": {
+            "slack": "Type *`report`* or *`report @user`* to see a full daily report, or someone else's report.",
+            "hangouts": "Type *`report`* or *`report @user`* to see a full daily report, or someone else's report.",
+            "msteams": "Type *`report`* to see a full daily report."
+          },
+          "dashboard": "Type *`dashboard`* to see all your team reports, history, settings and more.",
+          "settings": "Type *`settings`* to get a quick overview of your organization, teams and profile settings.",
+          "chicken": "Type *`chicken`* to launch a digital Rubber Chicken for any meeting.",
+          "feedback": "Type *`feedback`* to send me your comments or suggestions.",
+          "news": "Type *`news`* to read about announcements, new features and changes.",
+          "disable": "Type *`disable`* to disconnect me. I won't be able to send you more messages. You can re-enable me later by sending me a message.",
+          "kudos": "Type *`kudos`* or *`++`* *@user1* *@user2* _message_, to give kudos to the user mentioned, the message is optional.",
+          "kudosStatus": "Type *`kudos status`* in a direct message to see your kudos status.",
+          "commands": "Type *`commands`* to see all extra available commands.",
+          "time": "Type *`time`* *@user1* *@user2* to see the time for mentioned user.",
+          "timezone": "Type *`timezone`* *timezoneName* to know the time in specific timezones.",
+          "textformat": "Type *`textformat`* to see all available text formats for current platform."
+        },
+        "commands_title": {
+          "basic": "*Basic commands:*",
+          "other": "*Other commands:*"
+        }
+      },
+      "Hello": "Hey [user]! Have a great day and remember I'm so happy about being your friend.\nType *`help`* to learn more about me.",
+      "Dashboard": "Ok, please *[follow this link]({{{url}}})* to access the web dashboard.",
+      "News": {
+        "blog": "Take a look at *[my blog](https://www.dailybot.co/blog/)* to read about tips, key learnings and other content that our team is sharing.",
+        "changelog": "Read my *[release notes](https://www.dailybot.co/blog/release-notes/)* to stay in the loop about new features and improvements."
+      },
+      "Datetime": {
+        "info": "The time information for your user is:",
+        "infoMentionedUsers": "The time information for mentioned user is:",
+        "infoMentionedUsersMultiple": "The time information for mentioned users is:",
+        "dateTimeInfo": "{{{datetime}}} — {{{timezone}}}",
+        "infoNotFound": "The mentioned user is not an active member of DailyBot organization.",
+        "infoNotFoundMultiple": "The mentioned users are not active members of DailyBot organization.",
+        "infoMissing": "*Note:* _If the time information of any mentioned user does not appear, it is because he is not an active member of DailyBot organization._"
+      },
+      "CommandUpdated": "This command has been changed, please type *`help`* to see all current commands.",
+      "Chicken": "Here comes Arthur!\n\n*[Launch Rubber Chicken]({{{url}}})* 🐔\n\n_Pro tip: you can change the last part of Arthur's URL in your browser in order to create a unique room._",
+      "Feedback": {
+        "thanks": "Thanks for your feedback *[user]*!",
+        "noMessage": "You can send feedback about myself to the team behind me. Just type *`feedback`* _followed by your message_. Example: `feedback this bot is awesome and handsome 😍`",
+        "fail": "Sorry, it seems I forgot what we were talking about. Please type *`feedback` _your_message_* to send your feedback."
+      },
+      "DisableBotAction": "Ok, it's done. You have disconnected and disabled all private messaging between you and me.\nYou can still use the [web application]({{{url}}}).\n\nIf you want to talk to me again, just type *`enable`*.",
+      "EnableBotAction": {
+        "enable": "Hey! Welcome back, I'm ready to help you.\nYou can *[login into the web application]({{{url}}})* to check your settings.",
+        "previouslyEnabled": "It seems that you had enabled me previously, I'm ready to help you.\nPlease type *`help`* to know more about how I can help you."
+      },
+      "InactiveBot": "Hey! I'm sorry I can't help you right away as I'm disabled/disconnected.\nPlease type *`enable`* to re-connect me again.\n\nBTW, you can use my [web application]({{{url}}}) even if I'm disconnected.",
+      "InactiveUser": {
+        "isInactive": "Hey! Sorry for this, your DailyBot account for {{platform}} has been deactivated. Please contact an administrator if you want to enable it.",
+        "isUnapproved": "Hey! Sorry for this, your organization admins should approve you first as a DailyBot member. Please contact your DailyBot or {{platform}} workspace administrator."
+      },
+      "Settings": {
+        "info": "This is a quick overview of your settings. You can manage these settings on my *[Web Application]({{{url}}})*:",
+        "organization": "\n*[Organization settings]({{{url}}}):*\n{{{linePrefix}}}*Name:* {{{ orgName }}}\n{{{linePrefix}}}*Timezone:* {{{ orgTimezone }}}\n{{{linePrefix}}}*Work start time:* {{{ hourInitWork }}}\n{{{linePrefix}}}*Bot Language:* {{{ botLanguage }}}",
+        "teamsTitle": "\n*[Teams settings]({{{url}}}):*",
+        "teamInfo": "\n{{{linePrefix}}}{{{index}}}. *Team:* {{{ teamName }}}\n{{{linePrefix}}}- *Members:* {{{ membersTotal }}}\n{{{linePrefix}}}- *Timezone:* {{{ teamTimezone }}}\n{{{linePrefix}}}- *Skills:* {{{ skillsList }}}",
+        "members": "\n*[Organization Members settings]({{{url}}}):*\n{{{linePrefix}}}*Members:* {{membersTotal}}\n{{{linePrefix}}}*Organization Admins:* {{orgAdminsTotal}}\n{{{linePrefix}}}*Team Managers:* {{managersTotal}}",
+        "profile": "\n*[Profile settings]({{{url}}}):*\n{{{linePrefix}}}*Name:* {{{ userName }}}\n{{{linePrefix}}}*Timezone:* {{{ userTimezone }}}\n{{{linePrefix}}}*Work start time:* {{{hourInitWork}}}\n{{{linePrefix}}}*Role:* {{{userRole}}}"
+      },
+      "TextFormatsPreview": {
+        "text": "Hi there! The following is a list of the different formats supported by me.\nYou can also see this *[support article](https://www.dailybot.co)* to know more about how to build responses with these formats.",
+        "markdown": {
+          "strong": "*This is a bold text*",
+          "italic": "_This is an italic text_",
+          "strikethrough": "~This is a strikethrough text~",
+          "blockquote": "> This is a blockquote text",
+          "header": {
+            "msteams": {
+              "1": "# Header Level 1: This is a header text",
+              "2": "## Header Level 2: This is a header text",
+              "3": "### Header Level 3: This is a header text"
+            }
+          },
+          "unordererList": "This is an unorderer list:\n- Item 1\n- Item 2\n- Item 3",
+          "ordererList": "This is an orderer list:\n1. Item 1\n2. Item 2\n3. Item 3",
+          "highlight": "`This is a text highlighted`",
+          "codeBlock": "```\nThis is a code block line 1\nThis is a code block line 2\n```",
+          "link": "[This text contains a link](https://www.dailybot.co)",
+          "image": "There is a text formatted with an image below:\n![This text contains a image](https://d2e7nn6oh5ucns.cloudfront.net/images/SEO/ImgSEO_1x.png)"
+        }
+      },
+      "Thanks": {
+        "1": "Oh, don't you even mention it. I'm always happy to help.",
+        "2": "It's always my pleasure.",
+        "3": "You are so very welcome.",
+        "4": "It's no trouble at all. 😊",
+        "5": "Anytime! it's always my pleasure. 😊"
+      },
+      "Timezone": {
+        "info": "The time information for the typed timezone is:",
+        "tzSiteInfo": "Visit [this site](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) to get the complete list of timezone values.",
+        "inputRequired": "A timezone or offset value is required. _Example:`timezone UTC` or `timezone +1`_\nYou can also type `timezone list` to get the complete list of timezone values.",
+        "tzInvalid": "This is not a valid timezone value.",
+        "tzResultsFound": "I found {{{total}}} results that match with the written timezone:",
+        "tzResultsFoundMany": "I found {{{total}}} results that match with the written timezone.\nThese are the first 10 results:",
+        "offsetInfo": "The time information for the typed offset is:",
+        "offsetInvalid": "The offset value should be between -12 and +14."
+      },
+      "Undefined": "Sorry for not understanding. Please type *`help`* for me to help you."
+    },
+
+    "_COMMENT_PLATFORM_EVENTS": "----- PLATFORM EVENTS -----",
+
+    "platform_event": {
+      "MemberJoinedToDirectMessage": "Hey! thanks for installing me again.",
+      "MemberJoinedToChannel": {
+        "intro": "*Hi everyone!* I’m thrilled to be here.\nI’m DailyBot and I can help you automate daily updates, stand-up meetings, check-ins, retrospectives, and track team motivation.",
+        "extra": {
+          "slack": "Now you can share reports into this channel.",
+          "hangouts": "Now you can share reports into this room.",
+          "msteams": "Now you can receive reports in any channel of this team. All members from this team can now join DailyBot or be invited by an admin."
+        }
+      },
+      "PlatformTabOpened": {
+        "onboarding": {
+          "intro": "Hi! Nice to meet you! 👋\n\nI’m DailyBot and I’m here to help you automate daily updates, stand-up meetings, check-ins, retrospectives and track mood in your team.",
+          "info": "Discover some *use cases* for DailyBot:\n\n📋 Daily Standups for Scrum or Agile teams \n💻 Recurring retrospective meetings in Slack\n🎯 Periodic follow-ups about team goals or OKRs\n👥 Automated 1-1s in Slack\n📅 Weekly or monthly feedback from team\n\n\n\nYou can also track your team mood, and enable more types of check-ins with your team.\n\n[Learn more]({{{urlLanding}}}) or visit [our support center]({{{urlSupport}}}) if you need any help."
+        },
+        "greeting": "*Hi {{userName}}* 👏",
+        "emptyFollowups": {
+          "intro": "📋 It seems that you don’t have any pending follow-up tasks for today.",
+          "info": "Get the most out of DailyBot by automating more check-ins and follow-ups with your team.\n\n[Don’t miss our product updates](https://www.dailybot.com/blog/release-notes/), [check out our blog](https://www.dailybot.com/blog/), and visit [our support center](https://dailybot.freshdesk.com/support/home) if you need any help."
+        },
+        "withFollowups": {
+          "intro": "📋 You have some follow-ups for today, this is the list and status:",
+          "info": "🍩 Tip: try typing *“help”* in a private message and I’ll show you all the commands that you can use."
+        }
+      }
+    },
+
+    "_COMMENT_FOLLOWUP": "----- FOLLOW-UP -----",
+
+    "followup": {
+      "common": {
+        "followupMenuInfo": {
+          "toBeStarted": {
+            "optional": "Optional",
+            "pendingToResponseAnonymous": "_your response will be fully anonymous_"
+          },
+          "toGetReport": {
+            "responses": {
+              "1": "response",
+              "n": "responses"
+            }
+          },
+          "status": {
+            "completed": "Response completed",
+            "completedAnonymous": "Response completed anonymously",
+            "pending": "*Waiting for your response*",
+            "pendingLater": "For later today",
+            "pendingAnonymous": "*Waiting for your anonymous response*",
+            "pendingLaterAnonymous": "For later today. Anonymous response"
+          },
+          "reportLinkText": "[see web report]({{url}})"
+        },
+        "FollowupMotivation": {
+          "question": "Psst! Let's do this secretly. 🤐 What's your motivation about work this week? score from 1 to 5 _(5 being high motivation)_.",
+          "interactive": {
+            "actions": {
+              "1": {
+                "buttonAndDisplayText": {
+                  "slack": ":disappointed: · 1",
+                  "hangouts": "1",
+                  "msteams": "1"
+                },
+                "value": "1"
+              },
+              "2": {
+                "buttonAndDisplayText": {
+                  "slack": ":face_with_raised_eyebrow: · 2",
+                  "hangouts": "2",
+                  "msteams": "2"
+                },
+                "value": "2"
+              },
+              "3": {
+                "buttonAndDisplayText": {
+                  "slack": ":neutral_face: · 3",
+                  "hangouts": "3",
+                  "msteams": "3"
+                },
+                "value": "3"
+              },
+              "4": {
+                "buttonAndDisplayText": {
+                  "slack": ":smiley: · 4",
+                  "hangouts": "4",
+                  "msteams": "4"
+                },
+                "value": "4"
+              },
+              "5": {
+                "buttonAndDisplayText": {
+                  "slack": ":star-struck: · 5",
+                  "hangouts": "5",
+                  "msteams": "5"
+                },
+                "value": "5"
+              }
+            }
+          }
+        }
+      },
+      "FollowupDailySnoozed": "Ok, your daily has been snoozed for *15 minutes*.",
+      "FollowupDailySkipped": "Ok, you can start your daily later by typing *`daily`*.",
+      "FollowupDailyStatus": {
+        "intro": {
+          "withFollowups": "This is the status of your Follow-Ups for today:",
+          "emptyFollowups": "You don't have any active Follow-Ups to complete today."
+        }
+      },
+      "FollowupDailyQuestion": {
+        "answerNotValid": {
+          "numeric": "> _Please type a *valid number* to respond to this question._",
+          "boolean": "> _This question expects as answer *one of the options presented*, please try again._",
+          "multiple_choice": "> _This question expects as answer *one of the options presented*, please try again._"
+        }
+      }
+    },
+
+    "_COMMENT_KUDOS": "----- FOLLOW-KUDOS -----",
+
+    "kudo": {
+      "AddKudo": {
+        "success": "Done! Giving kudos is rewarding! Keep it up.",
+        "errors": {
+          "no_users_found": "A receivers was not found or was duplicated.\nTry giving Kudos again, receivers should have an active DailyBot account.",
+          "no_valid_users": "You can't give kudos to yourself, but I like your intentions and I give kudos to you!",
+          "params_validation_error": {
+            "common": "You should specify a team member when giving kudos, try using the command like this:",
+            "extra_channel": "*@dailybot* kudos to *@user1* *@user2* _for this and that_ or *@dailybot* *@user1* *@user2* ++ _for this and that_",
+            "extra_direct_message": "kudos to *@user1* *@user2* _for this and that_ or *@user1* *@user2* ++ _for this and that_"
+          }
+        }
+      },
+      "KudosStatus": "Hi {{user}}, please follow *[this link]({{url}})* to see your kudos status and the leaderboard."
+    }
+  },
+
+  "_COMMENT_BOT_TASK_HANDLERS": "----- TASK HANDLERS -----",
+
+  "bot_task": {
+    "core": {
+      "TeamMemberJoined": {
+        "userJoinedPreviously": "Hey! You've been invited to the *{{{teamName}}}* team by an administrator.\nI can help you to run daily updates, stand-ups, retrospectives, track motivation and more 😎.\n\nYou can visit *[my web app]({{{url}}})* to see more about your new team.",
+        "userRequireOnboarding": "Hey! Nice to meet you, I'm DailyBot.\n\nYou've been invited to the *{{{teamName}}}* team by an administrator.\nI can help you to run daily updates, stand-ups, retrospectives, track motivation and more 😎.\n\nLet’s set up your *[account completing  your registration here.]({{{url}}})*"
+      }
+    },
+    "followup": {
+      "FollowupInviteBotToChannel": "*Hi everyone!* I'm DailyBot and and I have been invited here to send daily updates about *{{{followupName}}}* Follow-Up.",
+      "FollowupDailyStart": {
+        "interactive": {
+          "actions": {
+            "yes": {
+              "buttonText": "Yes, I'm ready",
+              "displayText": "Yes, I'm ready",
+              "value": "Yes"
+            },
+            "snooze": {
+              "buttonText": {
+                "slack": "Snooze 15 minutes",
+                "hangouts": "Snooze",
+                "msteams": "Snooze 15 min"
+              },
+              "displayText": "Snooze for 15 minutes",
+              "value": "Snooze"
+            },
+            "no": {
+              "buttonText": {
+                "slack": "No, skip my daily",
+                "hangouts": "No, skip it",
+                "msteams": "No, skip my daily"
+              },
+              "displayText": "No, skip my daily",
+              "value": "No"
+            }
+          }
+        }
+      }
+    },
+    "vacation": {
+      "VacationInitReport": {
+        "info": {
+          "1": "News! A team member is taking time off from work:",
+          "n": "News! Some team members are taking time off from work:"
+        },
+        "memberOff": "> {{{userFullName}}} will be off from *{{{initDate}}}* to *{{{endDate}}}*"
+      },
+      "VacationEndReport": {
+        "info": {
+          "1": "News! A team member is back from time off:",
+          "n": "News! Some team members are back from time off:"
+        }
+      }
+    },
+    "kudo": {
+      "KudoOneByOneChannelReport": {
+        "title": {
+          "channel": "Hey! {{{usersReceiversNames}}} got kudos! 👏",
+          "directMessage": "Hey! You just got kudos! 👏"
+        },
+        "contentCongrats": "Congrats! ✨",
+        "givenBy": "Given by {{{userSenderName}}}"
+      }
+    }
+  },
+
+  "_COMMENT_COMMON": "----- COMMON -----",
+
+  "test": {
+    "plain": "Hello!",
+    "plainWithVar": "Hello {{{username}}}!",
+    "markdown": "Hello *User*!",
+    "markdownWithVars": "Hello *{{{username}}}*!"
+  },
+  "default": "Default",
+  "connectors": {
+    "and": "and"
+  },
+  "error": "Oh no! I am experiencing some problems with my system. Try again later or send me a *[support ticket here](https://dailybot.freshdesk.com/support/tickets/new)*.",
+  "language": {
+    "en": "English",
+    "es": "Spanish",
+    "pt": "Portuguese"
+  },
+  "role": {
+    "ADMIN_ORG": "Organization Admin",
+    "MANAGER": "Team Manager",
+    "ADMIN": "Team Admin",
+    "MEMBER": "Member"
+  },
+  "followup": {
+    "FollowupReport": {
+      "singleReport": {
+        "newReportArrived": "I just got a new daily report by *{{{full_name}}}* for the *{{{team_name}}}* Follow-Up. Check it out:",
+        "footerActionLink": {
+          "slack": "[View full report]({{{url}}})",
+          "hangouts": "<font color=\"#757575\"><i><a href=\"{{{url}}}\">View full report</a></i></font>",
+          "msteams": "<br/><br/><small><a href=\"{{{url}}}\">See full report</a></small>"
+        },
+        "msteams": {
+          "card": {
+            "title": "Daily update for \"{{{followupName}}}\" Follow-Up",
+            "reportText": "I just got a new daily report by {{{userName}}}. Check it out:",
+            "buttonActionText": "View full report"
+          }
+        },
+        "activitySummary": {
+          "title": "Activity summary",
+          "integrationsTitle": "{{{total}}} {{{integrationName}}} Updates",
+          "eventNameWithTotal": "{{{eventName}}} ({{{total}}} events)",
+          "eventWithLink": {
+            "slack": "• [{{{eventMessage}}}]({{{url}}})",
+            "hangouts": "• <a href=\"{{{url}}}\">{{{eventMessage}}}</a>",
+            "msteams": "• [{{{eventMessage}}}]({{{url}}})"
+          }
+        }
+      },
+      "multiReport": {
+        "title": "Report for \"{{{followupName}}}\" Follow-Up",
+        "reportText": {
+          "auto": "Hey! Your report is ready, this is a quick overview. [View web report]({{{url}}}).",
+          "autoWithFollowupName": "Hey! The report for *{{{followupName}}}* Follow-Up is ready! [View web report]({{{url}}}).",
+          "onDemand": "This is the summary of today's report. [View web report]({{{url}}}).",
+          "onDemandWithFollowupName": "This is a quick overview of *{{{followupName}}}* today's follow-up report. [View web report]({{{url}}})."
+        },
+        "summary": {
+          "title": "Summary",
+          "responses": {
+            "1": "*{{{total}}} response*\n",
+            "n": "*{{{total}}} responses*\n"
+          },
+          "blockers": {
+            "1": "*{{{total}}} blocker or attention point*\n",
+            "n": "*{{{total}}} blockers or attention points*\n"
+          },
+          "reportedBy": {
+            "1": "Reported by {{usersNames}}",
+            "n": "Reported by {{usersNames}}"
+          },
+          "pendingMembers": {
+            "1": "*{{{total}}} team member is pending to respond*\n{{{pendingMembers}}}",
+            "n": "*{{{total}}} team members are pending to respond*\n{{{pendingMembers}}}"
+          }
+        },
+        "blockersTitle": "These are some blockers or attention points reported:",
+        "extraBlockers": "Go to the web report to see more blockers.",
+        "buttonActionText": "View full report"
+      }
+    },
+    "notifications": {
+      "slack": {
+        "oauthV2Disclaimer": "_:closed_lock_with_key: DailyBot is improving your security introducing Slack granular permissions.\nPlease login in the web app to update your integration, [learn more](https://www.dailybot.com/blog/slack-oauthv2-upgrade/)._"
+      }
+    }
+  }
+}
